@@ -1,0 +1,40 @@
+/*************************************************************/
+/*MAIN PAGE STRUCTURE*****************************************/
+/*************************************************************/
+html, body{
+    background-image: linear-gradient(to bottom, white, #a6f2ff);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 100%;
+    overflow-x:hidden;
+}
+
+/*************************************************************/
+/*HEADER STUFF************************************************/
+/*************************************************************/
+.header{
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: 100px;
+    user-select: none;
+}
+
+#title{
+    font-family: Londrina Sketch, sans-serif;
+    font-weight: bold;
+    font-size: 5em;
+    font-style: normal;
+}
+
+#name{
+    margin-top: -50px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/*************************************************************/
+/*Body********************************************************/
+/*************************************************************/
