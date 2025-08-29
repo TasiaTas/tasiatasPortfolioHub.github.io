@@ -34,7 +34,8 @@ previewImages.forEach((img) => {
         const category = img.dataset.category;
         const videoId = videoMap[category] || "DEFAULT_VIDEO_ID";
 
-        container.innerHTML = `
+        if(screen.width >= 800) {
+            container.innerHTML = `
             <div class="video-container">
                 <iframe width="660" height="415"
                     src="https://www.youtube.com/embed/${videoId}?autoplay=1"
@@ -45,6 +46,43 @@ previewImages.forEach((img) => {
                 </iframe>
             </div>
         `;
+        }else if(screen.width >= 570 && screen.width < 800) {
+            container.innerHTML = `
+            <div class="video-container">
+                <iframe width="460" height="259"
+                    src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        `;
+        }else if (screen.width < 570 && screen.width >= 380) {
+            container.innerHTML = `
+            <div class="video-container">
+                <iframe width="300" height="169"
+                    src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        `;
+        }else if(screen.width < 380) {
+            container.innerHTML = `
+            <div class="video-container">
+                <iframe width="250" height="141"
+                    src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        `;
+        }
 
         // Update text temporarily
         text.innerHTML = "¿Cansado del video? ¡Haz clic aquí para volver!";

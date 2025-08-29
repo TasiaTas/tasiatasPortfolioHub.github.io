@@ -12,11 +12,6 @@ html, body{
     overflow-x:hidden;
 }
 
-body{
-    padding-left: 20em;
-    padding-right: 20em;
-}
-
 /*Vertical decor lines*/
 .line{
     position: fixed;
@@ -131,13 +126,43 @@ a[href^="mailto:"] {
     z-index: 0;
 }
 
+@media (max-width: 800px) {
+    #proj-indicator{
+        margin-top: -50px;
+    }
+    #circle{
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 680px) {
+    #title{
+        font-size: 1em;
+    }
+
+    #proj-indicator{
+        margin-top: -110px;
+    }
+    #proj-indicator h4{
+        font-size: 1em;
+    }
+    #proj-indicator img{
+        max-width: 20px;
+    }
+    #circle{
+        width: 300px;
+        height: 300px;
+    }
+}
+
 #title-line{
     border-bottom: 2px solid #87443a;
     display: block;
     padding-top: 50px;
     position: relative;
     left: -50vw;
-    width: 130vw;
+    width: 140vw;
 }
 
 .title-line-under {
@@ -152,6 +177,24 @@ a[href^="mailto:"] {
 /*************************************************************/
 /*PROJECT SECTION TITLE***************************************/
 /*************************************************************/
+.section{
+    padding-left: 20em;
+    padding-right: 20em;
+}
+
+@media (max-width: 1400px) {
+    .section{
+        padding-left: 10em;
+        padding-right: 10em;
+    }
+}
+@media (max-width: 830px) {
+    .section{
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+}
+
 #project-section{
     display: flex;
     align-items: center;
@@ -261,17 +304,29 @@ a[href^="mailto:"] {
     font-weight: bold;
 }
 
+@media (max-width: 1780px) {
+    .img-txt {
+        flex-direction: column;  /* stack image above text */
+        align-items: center;     /* center the content */
+        gap: 2em;                /* smaller gap for stacked layout */
+        margin-top: 5em;
+    }
+
+    .img-txt img {
+        max-width: 100%;         /* image takes full container width */
+        height: auto;
+        border-radius: 8px;
+        filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.3));
+    }
+
+    .description p {
+        text-align: left;      /* center the text under the image */
+    }
+}
+
 /*************************************************************/
 /*HIDDEN VIDEO************************************************/
 /*************************************************************/
-
-.video-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.3));
-}
-
 .video-container iframe {
     border-radius: 12px;
 }
