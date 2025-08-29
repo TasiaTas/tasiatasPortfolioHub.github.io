@@ -349,6 +349,15 @@ a[href^="mailto:"] {
     justify-content: space-between; /*pushes one div to flex-start and the other to flex-end*/
     align-items: center;
     padding: 5rem;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+@media (max-width: 680px) {
+    .footer-container{
+        margin-left: 5em;
+        margin-right: 5em;
+    }
 }
 
 .copyright{
