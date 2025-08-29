@@ -54,7 +54,7 @@ html, body{
     left: 7vw;
 }
 
-a[href^="mailto:"] {
+a[target="_blank"] {
     position: relative;
     z-index: 9999;
 }
